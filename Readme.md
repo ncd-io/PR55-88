@@ -13,15 +13,12 @@ USB to Serial Converter(PR55-68 or any USB to serial) Windows PC Board name PR55
 
 How to put in program mode
 
-start the programming utility
-
-select the correct COM port
-
-select the updated file
-
-click update and immediately
+Press and hold cfg button
 
 Press and release the RST button
 
+Release RST button 
+
 Once the firmware update is finished, device will reboot
 
+COmmand to start fimrware update -- **python ncd_py_bootloader_v2.py COM4 ./Upgrade.ncd 240**
