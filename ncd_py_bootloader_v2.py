@@ -10,7 +10,7 @@ READ_TIMEOUT = 5
 INTER_BYTE_TIMEOUT = 0.05
 MAX_CHUNK_SIZE = 240
 
-STARTUP_MSG_LEN = 51
+STARTUP_MSG_LEN = 50
 MANIFEST_LEN = 37
 
 BL_CMD_RESET = 3
@@ -46,7 +46,7 @@ def wait_startup(max_img_sz):
     while True:
         startup_msg = ser.read(STARTUP_MSG_LEN)
         if STARTUP_MSG_LEN == len(startup_msg):
-            max_size = (startup_msg[6] << 24) + (startup_msg[7] << 16) + (startup_msg[8] << 8) + startup_msg[9]
+            max_size = (startup_msg[5] << 24) + (startup_msg[6] << 16) + (startup_msg[7] << 8) + startup_msg[8]
             if max_size >= max_img_sz:
                 print("Startup msg received!")
                 break
