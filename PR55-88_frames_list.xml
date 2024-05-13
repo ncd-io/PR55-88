@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <loop>true</loop>
+  <repeat_times>1</repeat_times>
+  <repeat_period>60000</repeat_period>
+  <frames_list>
+    <frame name="SET_BAUDRATE_TO_115200">
+      <payload>7E00171000000000000000FFFFFFFE0000F4200000170001C20006</payload>
+    </frame>
+    <frame name="GET_BAUDRATE">
+      <payload>7E00131000000000000000FFFFFFFE0000F423000017C6</payload>
+    </frame>
+    <frame name="SET_STOP_BIT_TO_1">
+      <payload>7E00141000000000000000FFFFFFFE0000F42200001700C7</payload>
+    </frame>
+    <frame name="GET_STOP_BITS">
+      <payload>7E00131000000000000000FFFFFFFE0000F425000017C4</payload>
+    </frame>
+    <frame name="SET_PARITY_TO_NONE">
+      <payload>7E00141000000000000000FFFFFFFE0000F42100001700C8</payload>
+    </frame>
+    <frame name="GET_PARITY">
+      <payload>7E00131000000000000000FFFFFFFE0000F424000017C5</payload>
+    </frame>
+    <frame name="SET_MODE_TO_RAW">
+      <payload>7E00141000000000000000FFFFFFFE0000F42600001701C2</payload>
+    </frame>
+    <frame name="SET_MODE_TO_PROCESSED">
+      <payload>7E00141000000000000000FFFFFFFE0000F42600001700C3</payload>
+    </frame>
+    <frame name="GET_Mode">
+      <payload>7E00131000000000000000FFFFFFFE0000F427000017C2</payload>
+    </frame>
+    <frame name="SET_ADDRESS_TIMER_RATE_2_SEC">
+      <payload>7E00151000000000000000FFFFFFFE0000F42800001707D0EA</payload>
+    </frame>
+    <frame name="GET_RESET_ADDRESS_TIMER_RATE">
+      <payload>7E00131000000000000000FFFFFFFE0000F429000017C0</payload>
+    </frame>
+    <frame name="SET_RS_IO_DELAY_TO_100">
+      <payload>7E00141000000000000000FFFFFFFE0000F4300000176455</payload>
+    </frame>
+    <frame name="GET_RS_IO_DELAY">
+      <payload>7E00131000000000000000FFFFFFFE0000F431000017B8</payload>
+    </frame>
+    <frame name="REBOOT">
+      <payload>7E00161000000000000000FFFFFFFE0000F7400000000516178B</payload>
+    </frame>
+  </frames_list>
+</data>
