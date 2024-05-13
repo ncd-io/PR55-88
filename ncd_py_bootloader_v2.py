@@ -44,9 +44,16 @@ def compute_checksum(data):
 
 def wait_startup(max_img_sz):
     while True:
-        startup_msg = ser.read(STARTUP_MSG_LEN)
+        msg_rcvd = False
+        idx = 0
+        startup_msg = ser.read(STARTUP_MSG_LEN+1)
         if STARTUP_MSG_LEN == len(startup_msg):
-            max_size = (startup_msg[5] << 24) + (startup_msg[6] << 16) + (startup_msg[7] << 8) + startup_msg[8]
+            msg_rcvd = True
+        elif STARTUP_MSG_LEN+1 == len(startup_msg):
+            idx = 1
+            msg_rcvd = True
+        if True == msg_rcvd:
+            max_size = (startup_msg[5+idx] << 24) + (startup_msg[6+idx] << 16) + (startup_msg[7+idx] << 8) + startup_msg[8+idx]
             if max_size >= max_img_sz:
                 print("Startup msg received!")
                 break
